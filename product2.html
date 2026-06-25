@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Product Details | Bentex Corner</title>
+<meta name="description" content="View product details at Bentex Corner - Traditional Artificial Jewellery, Harda MP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--pink:#FDF0F5;--pink-dark:#F8BBD9;--gold:#C59B27;--charcoal:#2C2C2C;--green:#22C55E;--green-d:#16A34A;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{font-family:'Poppins','Noto Serif Devanagari',sans-serif;background:#FFF9FA;color:var(--charcoal);overflow-x:hidden;}
+a{text-decoration:none;}
+img{-webkit-user-drag:none;user-select:none;display:block;}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:20px;right:16px;z-index:999;width:54px;height:54px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(34,197,94,0.45);animation:waBounce 2s ease-in-out infinite;}
+.wa-float i{font-size:26px;}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--pink-dark);padding:10px 16px;}
+.header-inner{max-width:1152px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.logo-name{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(15px,4vw,22px);letter-spacing:2px;background:linear-gradient(45deg,#B76E79,#C59B27,#AA7C11);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+.logo-sub{font-size:clamp(7px,1.8vw,10px);color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+.back-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1px solid var(--pink-dark);background:var(--pink);color:var(--charcoal);font-size:12px;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;transition:all 0.2s;flex-shrink:0;}
+.back-btn:hover{background:var(--pink-dark);}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1152px;margin:0 auto;padding:12px 16px;font-size:11px;color:#9CA3AF;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.breadcrumb a{color:#9CA3AF;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb span{color:var(--gold);}
+
+/* MAIN LAYOUT */
+.main{max-width:1152px;margin:0 auto;padding:0 16px 48px;}
+.product-layout{display:grid;grid-template-columns:1fr;gap:24px;}
+@media(min-width:768px){.product-layout{grid-template-columns:1fr 1fr;gap:40px;}}
+
+/* IMAGE SECTION */
+.img-section{}
+.main-img-wrap{width:100%;aspect-ratio:1/1;border-radius:20px;overflow:hidden;background:var(--pink);border:1px solid var(--pink-dark);position:relative;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+.main-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;pointer-events:none;}
+.main-img-wrap:hover img{transform:scale(1.03);}
+.oos-banner{position:absolute;top:16px;left:16px;background:#EF4444;color:white;font-size:11px;font-weight:700;padding:5px 14px;border-radius:999px;text-transform:uppercase;letter-spacing:1px;z-index:5;}
+.discount-banner{position:absolute;top:16px;right:16px;background:var(--gold);color:white;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;z-index:5;}
+
+/* THUMBNAILS */
+.thumbs{display:flex;gap:8px;margin-top:12px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+.thumbs::-webkit-scrollbar{display:none;}
+.thumb{width:64px;height:64px;flex-shrink:0;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;transition:all 0.2s;background:var(--pink);}
+.thumb:hover{border-color:var(--gold);}
+.thumb.active{border-color:var(--gold);box-shadow:0 0 0 2px rgba(197,155,39,0.3);}
+.thumb img{width:100%;height:100%;object-fit:cover;pointer-events:none;}
+
+/* DETAILS SECTION */
+.details-section{}
+.product-cat{font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.product-name{font-family:'Cinzel',serif;font-size:clamp(18px,4vw,28px);font-weight:700;color:var(--charcoal);line-height:1.3;margin-bottom:16px;}
+.product-name-hi{font-family:'Noto Serif Devanagari',serif;font-size:clamp(14px,3vw,20px);color:#6B7280;font-weight:400;margin-bottom:16px;display:none;}
+
+/* PRICE */
+.price-section{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.price-main{font-size:clamp(26px,5vw,36px);font-weight:800;color:var(--gold);}
+.price-original{font-size:16px;color:#9CA3AF;text-decoration:line-through;}
+.price-save{background:#DCFCE7;color:#166534;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;}
+
+/* STOCK STATUS */
+.stock-status{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;margin-bottom:20px;}
+.stock-dot{width:8px;height:8px;border-radius:50%;}
+.in-stock .stock-dot{background:#22C55E;}
+.in-stock{color:#166534;}
+.out-stock .stock-dot{background:#EF4444;}
+.out-stock{color:#DC2626;}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--pink-dark);margin:20px 0;}
+
+/* PRODUCT INFO GRID */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.info-item{background:var(--pink);border:1px solid var(--pink-dark);border-radius:12px;padding:12px 14px;}
+.info-label{font-size:9px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:4px;}
+.info-value{font-size:13px;font-weight:600;color:var(--charcoal);}
+
+/* DESCRIPTION */
+.desc-section{margin-bottom:20px;}
+.desc-title{font-size:13px;font-weight:700;color:var(--charcoal);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.desc-title i{color:var(--gold);}
+.desc-text{font-size:13px;color:#4B5563;line-height:1.8;}
+
+/* FEATURES */
+.features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.feature-item{display:flex;align-items:center;gap:10px;font-size:12px;color:#374151;}
+.feature-item i{color:var(--gold);width:16px;text-align:center;flex-shrink:0;}
+
+/* ORDER BUTTONS */
+.order-section{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+.wa-order-btn{width:100%;padding:14px;border-radius:14px;background:var(--green);color:white;border:none;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all 0.2s;font-family:'Poppins',sans-serif;box-shadow:0 4px 12px rgba(34,197,94,0.3);}
+.wa-order-btn:hover{background:var(--green-d);transform:translateY(-1px);}
+.wa-order-btn:active{transform:scale(0.98);}
+.wa-order-btn.oos{background:#F3F4F6;color:#9CA3AF;pointer-events:none;box-shadow:none;}
+.wa-enquire-btn{width:100%;padding:13px;border-radius:14px;background:white;color:var(--charcoal);border:2px solid var(--pink-dark);font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all 0.2s;font-family:'Poppins',sans-serif;}
+.wa-enquire-btn:hover{border-color:var(--gold);background:var(--pink);}
+
+/* RELATED PRODUCTS */
+.related-section{margin-top:40px;}
+.related-title{font-family:'Cinzel',serif;font-size:clamp(16px,3vw,22px);font-weight:700;color:var(--charcoal);display:flex;align-items:center;gap:8px;margin-bottom:20px;}
+.title-bar{width:5px;height:22px;background:var(--gold);border-radius:3px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+@media(min-width:600px){.related-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){.related-grid{grid-template-columns:repeat(4,1fr);}}
+
+/* RELATED CARD */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.r-card{background:white;border-radius:14px;border:1px solid var(--pink-dark);overflow:hidden;cursor:pointer;transition:all 0.3s;animation:fadeUp 0.4s ease both;}
+.r-card:hover{box-shadow:0 6px 18px rgba(0,0,0,0.1);border-color:var(--gold);transform:translateY(-2px);}
+.r-card-img{width:100%;aspect-ratio:1/1;background:var(--pink);overflow:hidden;}
+.r-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;pointer-events:none;}
+.r-card:hover .r-card-img img{transform:scale(1.05);}
+.r-card-body{padding:9px 11px 11px;}
+.r-card-name{font-size:11px;font-weight:600;color:var(--charcoal);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:6px;}
+.r-card-price{font-size:14px;font-weight:700;color:var(--gold);}
+
+/* LOADING */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;}
+.loading i{font-size:36px;color:var(--gold);animation:spin 1s linear infinite;}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* NOT FOUND */
+.not-found{text-align:center;padding:60px 16px;}
+.not-found i{font-size:48px;color:var(--pink-dark);margin-bottom:16px;}
+
+/* SKELETON */
+@keyframes shimmer{0%{background-position:-468px 0}100%{background-position:468px 0}}
+.skel{background:linear-gradient(to right,#f0e6ea 8%,#fce4ef 18%,#f0e6ea 33%);background-size:800px 104px;animation:shimmer 1.5s linear infinite;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<!-- FLOATING WA -->
+<a class="wa-float" id="waFloat" href="https://wa.me/919669871180" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+            <img src="https://res.cloudinary.com/dypbg6lce/image/upload/v1782293863/WhatsApp_Image_2026-06-24_at_3.05.19_PM_mvyozs.jpg" alt="Bentex Corner Logo" style="height:44px;width:44px;object-fit:contain;border-radius:50%;border:1.5px solid #C59B27;background:white;pointer-events:none;">
+            <div><p class="logo-name">BENTEX CORNER</p><p class="logo-sub">Harda, Madhya Pradesh</p></div>
+        </a>
+        <button class="back-btn" onclick="window.location.href='index.html'">
+            <i class="fa-solid fa-arrow-left"></i> Back to Shop
+        </button>
+    </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <i class="fa-solid fa-chevron-right" style="font-size:8px"></i>
+    <a href="index.html">Collection</a>
+    <i class="fa-solid fa-chevron-right" style="font-size:8px"></i>
+    <span id="breadcrumbCat">Product</span>
+    <i class="fa-solid fa-chevron-right" style="font-size:8px"></i>
+    <span id="breadcrumbName" style="color:var(--charcoal);font-weight:600">Loading...</span>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- LOADING STATE -->
+    <div class="loading" id="loadingState">
+        <i class="fa-solid fa-gem"></i>
+        <p style="color:#9CA3AF;font-size:14px">Loading product details...</p>
+    </div>
+
+    <!-- NOT FOUND STATE -->
+    <div class="not-found" id="notFound" style="display:none">
+        <i class="fa-regular fa-face-sad-tear"></i>
+        <h2 style="font-family:'Cinzel',serif;margin-bottom:8px">Product Not Found</h2>
+        <p style="color:#9CA3AF;margin-bottom:20px">This product may no longer be available.</p>
+        <a href="index.html" style="background:var(--gold);color:white;padding:10px 24px;border-radius:999px;font-weight:600;font-size:13px;">Back to Collection</a>
+    </div>
+
+    <!-- PRODUCT CONTENT -->
+    <div id="productContent" style="display:none">
+
+        <!-- PRODUCT LAYOUT -->
+        <div class="product-layout">
+
+            <!-- LEFT: IMAGES -->
+            <div class="img-section">
+                <div class="main-img-wrap">
+                    <img id="mainImg" src="" alt="Product Image">
+                    <div class="oos-banner" id="oosBanner" style="display:none">Out of Stock</div>
+                    <div class="discount-banner" id="discountBanner" style="display:none"></div>
+                </div>
+                <div class="thumbs" id="thumbsRow"></div>
+            </div>
+
+            <!-- RIGHT: DETAILS -->
+            <div class="details-section">
+                <p class="product-cat" id="productCat"></p>
+                <h1 class="product-name" id="productName"></h1>
+                <h2 class="product-name-hi" id="productNameHi"></h2>
+
+                <!-- PRICE -->
+                <div class="price-section">
+                    <span class="price-main" id="priceMain"></span>
+                    <span class="price-original" id="priceOriginal" style="display:none"></span>
+                    <span class="price-save" id="priceSave" style="display:none"></span>
+                </div>
+
+                <!-- STOCK -->
+                <div class="stock-status" id="stockStatus">
+                    <span class="stock-dot"></span>
+                    <span id="stockText"></span>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- INFO GRID -->
+                <div class="info-grid" id="infoGrid"></div>
+
+                <!-- DESCRIPTION -->
+                <div class="desc-section" id="descSection" style="display:none">
+                    <p class="desc-title"><i class="fa-solid fa-scroll"></i> Product Description</p>
+                    <p class="desc-text" id="descText"></p>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- FEATURES -->
+                <div class="features">
+                    <div class="feature-item"><i class="fa-solid fa-shield-halved"></i><span>Quality guaranteed by Bentex Corner</span></div>
+                    <div class="feature-item"><i class="fa-brands fa-whatsapp"></i><span>Order confirmed via WhatsApp chat</span></div>
+                    <div class="feature-item"><i class="fa-solid fa-store"></i><span>Available at our Harda store</span></div>
+                    <div class="feature-item"><i class="fa-solid fa-rotate-left"></i><span>Easy exchange at shop within 7 days</span></div>
+                </div>
+
+                <!-- ORDER BUTTONS -->
+                <div class="order-section">
+                    <a id="orderBtn" href="#" target="_blank" class="wa-order-btn">
+                        <i class="fab fa-whatsapp" style="font-size:20px"></i>
+                        Order on WhatsApp
+                    </a>
+                    <a id="enquireBtn" href="#" target="_blank" class="wa-enquire-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Ask a Question
+                    </a>
+                </div>
+
+                <!-- SHARE -->
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <span style="font-size:12px;color:#9CA3AF;font-weight:600">SHARE:</span>
+                    <button onclick="shareProduct()" style="display:flex;align-items:center;gap:5px;background:var(--pink);border:1px solid var(--pink-dark);padding:6px 12px;border-radius:999px;font-size:11px;font-weight:600;cursor:pointer;color:var(--charcoal);font-family:'Poppins',sans-serif;">
+                        <i class="fa-solid fa-share-nodes" style="color:var(--gold)"></i> Share
+                    </button>
+                    <button onclick="copyLink()" style="display:flex;align-items:center;gap:5px;background:var(--pink);border:1px solid var(--pink-dark);padding:6px 12px;border-radius:999px;font-size:11px;font-weight:600;cursor:pointer;color:var(--charcoal);font-family:'Poppins',sans-serif;">
+                        <i class="fa-regular fa-copy" style="color:var(--gold)"></i> Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RELATED PRODUCTS -->
+        <div class="related-section">
+            <h3 class="related-title">
+                <span class="title-bar"></span>
+                You May Also Like
+            </h3>
+            <div class="related-grid" id="relatedGrid"></div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:var(--charcoal);color:rgba(255,255,255,0.88);padding:24px 16px;border-top:4px solid var(--gold);text-align:center;margin-top:40px;">
+    <p style="font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:var(--gold);margin-bottom:6px;">BENTEX CORNER</p>
+    <p style="font-size:12px;color:rgba(255,255,255,0.5);">Near Kothari Chowk, Ghantaghar, Harda, MP &nbsp;|&nbsp; +91 96698 71180</p>
+    <p style="font-size:10px;color:rgba(255,255,255,0.3);margin-top:8px;">&copy; <span id="yr"></span> Bentex Corner. All rights reserved.</p>
+</footer>
+
+<script>
+const SHEET_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoTuEwqmqhXhsZCwk4hMk2zzeMnv0TrD3GFqQRCYuEGvnkVj0kvEdy4FPtlQy01-Rhax3wJNmMWSyK/pub?gid=0&single=true&output=csv";
+const WA="919669871180";
+const LOGO="https://res.cloudinary.com/dypbg6lce/image/upload/v1782293863/WhatsApp_Image_2026-06-24_at_3.05.19_PM_mvyozs.jpg";
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+let lang=localStorage.getItem('bx_lang')||'en';
+let allProducts=[];
+let currentProduct=null;
+
+// ── GET PRODUCT ID FROM URL ──────────────────────────────────
+const urlParams=new URLSearchParams(window.location.search);
+const productId=parseInt(urlParams.get('id'));
+
+// ── DEMO FALLBACK DATA ────────────────────────────────────────
+const DEMO=[
+    {id:1,en:"Classic Kundan Bridal Necklace Set",hi:"क्लासिक कुंदन ब्राइडल नेकलेस सेट",cat:"Necklace",price:1850,discount:1500,imgs:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"A stunning handcrafted Kundan bridal necklace set with intricate floral patterns. Perfect for weddings and festive occasions. Comes with matching earrings.",material:"Zinc Alloy with Gold Plating",size:"Adjustable, fits all neck sizes",guarantee:"6 months color guarantee"},
+    {id:2,en:"Rose Gold Jhumka Earrings",hi:"रोज़ गोल्ड झुमके",cat:"Earrings",price:380,discount:0,imgs:["https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"Beautiful rose gold jhumka earrings with pearl drops. Lightweight and comfortable to wear all day. Perfect for both casual and festive occasions.",material:"Copper with Rose Gold Plating",size:"Length: 4cm, Hook type",guarantee:"3 months color guarantee"},
+    {id:3,en:"Gold Plated Bangles Set",hi:"गोल्ड कंगन सेट",cat:"Bangles",price:750,discount:600,imgs:["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"A beautiful set of 6 gold plated bangles with intricate traditional designs. Perfect for festivals and weddings.",material:"Brass with Gold Plating",size:"2.4, 2.6, 2.8 sizes available",guarantee:"6 months color guarantee"},
+    {id:4,en:"Royal Adjustable Ring",hi:"शाही अंगूठी",cat:"Rings",price:240,discount:0,imgs:["https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"Elegant royal style adjustable ring with stone setting. One size fits all design.",material:"Zinc Alloy with Gold Plating",size:"Adjustable, one size fits all",guarantee:"3 months color guarantee"},
+    {id:5,en:"Traditional Meenakari Payal",hi:"मीनाकारी पायल",cat:"Anklets",price:490,discount:0,imgs:["https://images.unsplash.com/photo-1543294001-f7cbfe92237e?auto=format&fit=crop&q=80&w=800"],stock:false,desc:"Traditional Meenakari anklet with colorful enamel work and ghungroo bells. Pair of 2.",material:"Brass with Meenakari Enamel",size:"Adjustable up to 28cm",guarantee:"No color guarantee on enamel work"},
+    {id:6,en:"Kundan Maang Tikka",hi:"कुंदन मांग टीका",cat:"Maang Tikka",price:320,discount:0,imgs:["https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"Beautiful Kundan Maang Tikka with pearl drops. Perfect for bridal and festive occasions.",material:"Zinc Alloy with Gold Plating",size:"Chain length adjustable",guarantee:"6 months color guarantee"},
+    {id:7,en:"Heritage Bridal Set",hi:"हेरिटेज ब्राइडल सेट",cat:"Bridal Sets",price:4500,discount:3800,imgs:["https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&q=80&w=800","https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"Complete heritage bridal jewellery set including necklace, earrings, maang tikka, and bangles. A complete bridal look in one set.",material:"Zinc Alloy with Gold Plating, Kundan stones",size:"Necklace adjustable, Bangles in 2.6",guarantee:"6 months color guarantee"},
+    {id:8,en:"Gold Choker Necklace",hi:"गोल्ड चोकर हार",cat:"Necklace",price:1200,discount:0,imgs:["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800"],stock:true,desc:"Exquisite gold choker necklace with traditional motifs. A timeless piece for every occasion.",material:"Zinc Alloy with 18K Gold Plating",size:"Adjustable chain, fits neck sizes 12-16 inches",guarantee:"6 months color guarantee"}
+];
+
+// ── CSV PARSER ────────────────────────────────────────────────
+function parseCSV(text){
+    const lines=text.trim().split('\n').slice(1);
+    return lines.map((line,i)=>{
+        const cols=[];let q=false,col='';
+        for(let c of line){if(c==='"'){q=!q}else if(c===','&&!q){cols.push(col.trim());col=''}else col+=c;}
+        cols.push(col.trim());
+        const imgs=[cols[5],cols[6],cols[7]].filter(Boolean);
+        return{
+            id:parseInt(cols[0])||i+1,
+            en:cols[1]||'Jewellery',hi:cols[2]||'आभूषण',
+            cat:cols[3]||'Necklace',price:parseFloat(cols[4])||0,
+            imgs:imgs.length?imgs:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800"],
+            stock:cols[9]?!['false','0','no'].includes(cols[9].toLowerCase().trim()):true,
+            desc:cols[10]||'',material:cols[11]||'',size:cols[12]||'',
+            discount:parseFloat(cols[13])||0,guarantee:cols[14]||''
+        };
+    }).filter(p=>p.en);
+}
+
+// ── LOAD ──────────────────────────────────────────────────────
+async function load(){
+    try{
+        const r=await fetch(SHEET_URL);
+        if(!r.ok)throw new Error('fail');
+        const csv=await r.text();
+        const parsed=parseCSV(csv);
+        allProducts=parsed.length?parsed:DEMO;
+    }catch(e){
+        console.warn('Sheet failed, using demo');
+        allProducts=DEMO;
+    }
+    const p=allProducts.find(p=>p.id===productId);
+    if(!p){document.getElementById('loadingState').style.display='none';document.getElementById('notFound').style.display='block';return;}
+    currentProduct=p;
+    renderProduct(p);
+    renderRelated(p);
+    document.getElementById('loadingState').style.display='none';
+    document.getElementById('productContent').style.display='block';
+}
+
+// ── RENDER PRODUCT ────────────────────────────────────────────
+function renderProduct(p){
+    const name=lang==='en'?p.en:p.hi;
+
+    // Page title & meta
+    document.title=p.en+' | Bentex Corner';
+
+    // Breadcrumb
+    document.getElementById('breadcrumbCat').textContent=p.cat;
+    document.getElementById('breadcrumbName').textContent=p.en;
+
+    // Main image
+    document.getElementById('mainImg').src=p.imgs[0];
+    document.getElementById('mainImg').alt=p.en;
+
+    // Stock banner
+    if(!p.stock){document.getElementById('oosBanner').style.display='block';}
+
+    // Discount banner
+    if(p.discount>0){
+        const pct=Math.round((1-p.discount/p.price)*100);
+        const banner=document.getElementById('discountBanner');
+        banner.textContent=pct+'% OFF';
+        banner.style.display='block';
+    }
+
+    // Thumbnails
+    const thumbsRow=document.getElementById('thumbsRow');
+    p.imgs.forEach((img,i)=>{
+        const div=document.createElement('div');
+        div.className='thumb'+(i===0?' active':'');
+        div.id='thumb-'+i;
+        div.innerHTML='<img src="'+img+'" alt="View '+( i+1)+'">';
+        div.onclick=()=>switchImg(i,p.imgs);
+        thumbsRow.appendChild(div);
+    });
+
+    // Category & name
+    document.getElementById('productCat').textContent=p.cat;
+    document.getElementById('productName').textContent=p.en;
+    if(lang==='hi'||true){// always show Hindi name
+        const hiEl=document.getElementById('productNameHi');
+        hiEl.textContent=p.hi;
+        hiEl.style.display='block';
+    }
+
+    // Price
+    if(p.discount>0){
+        document.getElementById('priceMain').textContent='Rs.'+p.discount;
+        const orig=document.getElementById('priceOriginal');
+        orig.textContent='Rs.'+p.price;orig.style.display='inline';
+        const save=document.getElementById('priceSave');
+        const pct=Math.round((1-p.discount/p.price)*100);
+        save.textContent=pct+'% OFF';save.style.display='inline';
+    } else {
+        document.getElementById('priceMain').textContent='Rs.'+p.price;
+    }
+
+    // Stock status
+    const ss=document.getElementById('stockStatus');
+    const st=document.getElementById('stockText');
+    if(p.stock){ss.className='stock-status in-stock';st.textContent='In Stock — Available at store';}
+    else{ss.className='stock-status out-stock';st.textContent='Out of Stock — Contact us to check availability';}
+
+    // Info grid
+    const infoGrid=document.getElementById('infoGrid');
+    const infos=[
+        {label:'Category',value:p.cat,icon:'fa-tag'},
+        {label:'Material',value:p.material||'Zinc Alloy, Gold Plated',icon:'fa-layer-group'},
+        {label:'Size',value:p.size||'Standard / Adjustable',icon:'fa-ruler'},
+        {label:'Guarantee',value:p.guarantee||'Quality Guaranteed',icon:'fa-shield-halved'},
+    ];
+    infos.forEach(info=>{
+        const div=document.createElement('div');
+        div.className='info-item';
+        div.innerHTML='<p class="info-label"><i class="fa-solid '+info.icon+'" style="color:var(--gold);margin-right:4px"></i>'+info.label+'</p><p class="info-value">'+info.value+'</p>';
+        infoGrid.appendChild(div);
+    });
+
+    // Description
+    if(p.desc){
+        document.getElementById('descText').textContent=p.desc;
+        document.getElementById('descSection').style.display='block';
+    }
+
+    // WhatsApp order button
+    const orderMsg=lang==='en'
+        ?'Namaste Bentex Corner! I want to order:\n\n*Product:* '+p.en+'\n*Price:* Rs.'+(p.discount||p.price)+'\n\nIs it available in stock?'
+        :'नमस्ते बेंटेक्स कॉर्नर! मुझे ऑर्डर करना है:\n\n*उत्पाद:* '+p.hi+'\n*मूल्य:* Rs.'+(p.discount||p.price)+'\n\nक्या यह उपलब्ध है?';
+    const enquireMsg='Namaste Bentex Corner! I have a question about: *'+p.en+'*\n\nCould you please share more details?';
+
+    const orderBtn=document.getElementById('orderBtn');
+    const enquireBtn=document.getElementById('enquireBtn');
+
+    if(p.stock){
+        orderBtn.href='https://wa.me/'+WA+'?text='+encodeURIComponent(orderMsg);
+        orderBtn.innerHTML='<i class="fab fa-whatsapp" style="font-size:20px"></i> Order on WhatsApp';
+    } else {
+        orderBtn.className='wa-order-btn oos';
+        orderBtn.innerHTML='<i class="fa-solid fa-ban"></i> Out of Stock';
+    }
+    enquireBtn.href='https://wa.me/'+WA+'?text='+encodeURIComponent(enquireMsg);
+
+    // Floating WA
+    document.getElementById('waFloat').href='https://wa.me/'+WA+'?text='+encodeURIComponent(orderMsg);
+}
+
+// ── SWITCH IMAGE ──────────────────────────────────────────────
+function switchImg(idx,imgs){
+    document.getElementById('mainImg').src=imgs[idx];
+    document.querySelectorAll('.thumb').forEach((t,i)=>{
+        t.className='thumb'+(i===idx?' active':'');
+    });
+}
+
+// ── RENDER RELATED ────────────────────────────────────────────
+function renderRelated(p){
+    const related=allProducts.filter(r=>r.cat===p.cat&&r.id!==p.id).slice(0,4);
+    const grid=document.getElementById('relatedGrid');
+    if(!related.length){document.querySelector('.related-section').style.display='none';return;}
+    related.forEach((r,i)=>{
+        const card=document.createElement('div');
+        card.className='r-card';
+        card.style.animationDelay=i*60+'ms';
+        card.onclick=()=>{window.location.href='product.html?id='+r.id;};
+        card.innerHTML='<div class="r-card-img"><img src="'+r.imgs[0]+'" alt="'+r.en+'" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=400\'"></div><div class="r-card-body"><p class="r-card-name">'+(lang==='en'?r.en:r.hi)+'</p><p class="r-card-price">Rs.'+( r.discount||r.price)+'</p></div>';
+        grid.appendChild(card);
+    });
+}
+
+// ── SHARE ────────────────────────────────────────────────────
+function shareProduct(){
+    if(navigator.share&&currentProduct){
+        navigator.share({title:currentProduct.en+' | Bentex Corner',text:'Check out this beautiful jewellery at Bentex Corner!',url:window.location.href});
+    } else {copyLink();}
+}
+function copyLink(){
+    navigator.clipboard.writeText(window.location.href).then(()=>{
+        const btn=event.currentTarget;
+        const orig=btn.innerHTML;
+        btn.innerHTML='<i class="fa-solid fa-check" style="color:green"></i> Copied!';
+        setTimeout(()=>{btn.innerHTML=orig;},2000);
+    });
+}
+
+// ── INIT ────────────────────────────────────────────────────
+load();
+document.addEventListener('contextmenu',e=>{if(e.target.tagName==='IMG')e.preventDefault();});
+</script>
+</body>
+</html>
