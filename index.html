@@ -1,795 +1,250 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bentex Corner | Traditional Indian Artificial Jewellery Harda</title>
-    <meta name="description" content="Bentex Corner - Premium quality traditional artificial jewellery in Harda, Madhya Pradesh. Shop necklaces, earrings, bangles, bridal sets and more.">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brandPink: '#FDF0F5',
-                        brandPinkDark: '#F8BBD9',
-                        roseGold: '#C59B27',
-                        goldHover: '#E5C060',
-                        deepCharcoal: '#2C2C2C',
-                        whatsappGreen: '#25D366'
-                    },
-                    fontFamily: {
-                        serifTitle: ['Cinzel', 'Noto Serif Devanagari', 'serif'],
-                        body: ['Poppins', 'Noto Serif Devanagari', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            font-family: 'Poppins', 'Noto Serif Devanagari', sans-serif;
-            background-color: #FFF9FA;
-            color: #2C2C2C;
-        }
-        .mandala-bg {
-            background-image: radial-gradient(circle at center, rgba(248,187,217,0.15) 0%, transparent 70%);
-        }
-        .paisley-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23f8bbd9' fill-opacity='0.15'%3E%3Cpath d='M40 0C25 0 10 15 10 30c0 15 15 30 30 50 15-20 30-35 30-50C70 15 55 0 40 0zm0 45c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        .gold-text-gradient {
-            background: linear-gradient(45deg, #B76E79, #C59B27, #AA7C11);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .product-img { transition: transform 0.5s ease; }
-        .product-card:hover .product-img { transform: scale(1.05); }
-
-        /* Loading skeleton shimmer */
-        @keyframes shimmer {
-            0% { background-position: -468px 0; }
-            100% { background-position: 468px 0; }
-        }
-        .skeleton {
-            background: linear-gradient(to right, #f0e6ea 8%, #fce4ef 18%, #f0e6ea 33%);
-            background-size: 800px 104px;
-            animation: shimmer 1.5s linear infinite;
-        }
-
-        /* Fade in for product cards */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in-card {
-            animation: fadeInUp 0.4s ease both;
-        }
-
-        /* Search bar focus ring */
-        .search-input:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px #C59B27;
-        }
-
-        /* Smooth spin for decorative elements */
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-        }
-        .animate-spin-slow { animation: spin-slow 12s linear infinite; }
-
-        /* WhatsApp bounce */
-        @keyframes wa-bounce {
-            0%, 100% { transform: translateY(0); }
-            50%       { transform: translateY(-6px); }
-        }
-        .wa-bounce { animation: wa-bounce 2s ease-in-out infinite; }
-
-        /* Disable right click on images */
-        img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
-        a img, button img { pointer-events: auto; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Bentex Corner | Traditional Artificial Jewellery Harda MP</title>
+<meta name="description" content="Bentex Corner - Premium quality traditional artificial jewellery in Harda, Madhya Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--pink:#FDF0F5;--pink-dark:#F8BBD9;--gold:#C59B27;--charcoal:#2C2C2C;--green:#22C55E;--green-d:#16A34A;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{font-family:'Poppins','Noto Serif Devanagari',sans-serif;background:#FFF9FA;color:var(--charcoal);overflow-x:hidden;}
+a{text-decoration:none;}
+img{-webkit-user-drag:none;user-select:none;display:block;}
+.wa-float{position:fixed;bottom:20px;right:16px;z-index:999;width:54px;height:54px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(34,197,94,0.45);animation:waBounce 2s ease-in-out infinite;}
+.wa-float:hover{transform:scale(1.1);}
+.wa-float i{font-size:26px;}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--pink-dark);padding:10px 16px;}
+.header-inner{max-width:1152px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.logo-name{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(15px,4vw,22px);letter-spacing:2px;background:linear-gradient(45deg,#B76E79,#C59B27,#AA7C11);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+.logo-sub{font-size:clamp(7px,1.8vw,10px);color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+.header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:999px;border:1px solid var(--pink-dark);background:var(--pink);color:var(--charcoal);font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Poppins',sans-serif;}
+.wa-hdr{display:none;align-items:center;gap:6px;background:var(--green);color:white;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:600;}
+@media(min-width:560px){.wa-hdr{display:flex;}}
+.hero{background:var(--pink);padding:clamp(28px,6vw,60px) 16px;text-align:center;overflow:hidden;border-bottom:1px solid var(--pink-dark);position:relative;}
+.hero-gem{width:58px;height:58px;border-radius:50%;border:2px dashed var(--gold);display:flex;align-items:center;justify-content:center;background:white;margin:0 auto 12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.hero-gem i{font-size:22px;color:var(--gold);}
+.hero-title-hi{font-family:'Noto Serif Devanagari',serif;font-size:clamp(20px,5.5vw,46px);font-weight:900;color:var(--charcoal);line-height:1.2;}
+.hero-title-en{font-family:'Cinzel',serif;font-size:clamp(12px,3vw,22px);font-weight:400;margin-top:4px;background:linear-gradient(45deg,#B76E79,#C59B27);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-div{display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0;}
+.hero-div span{height:1px;width:40px;background:var(--gold);}
+.hero-tag-hi{font-family:'Noto Serif Devanagari',serif;font-size:clamp(13px,3.5vw,20px);color:var(--gold);font-style:italic;font-weight:600;}
+.hero-tag-en{font-size:clamp(9px,2vw,12px);color:#6B7280;letter-spacing:2px;text-transform:uppercase;margin-top:3px;}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px;}
+.hero-badge{background:rgba(255,255,255,0.85);border:1px solid var(--pink-dark);padding:5px 12px;border-radius:999px;font-size:clamp(9px,2.2vw,11px);color:#374151;display:flex;align-items:center;gap:5px;}
+.main{max-width:1152px;margin:0 auto;padding:20px 14px 32px;}
+.rangoli{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:18px;opacity:0.7;}
+.rl{height:1px;width:70px;}
+.rl.l{background:linear-gradient(to right,transparent,var(--gold));}
+.rl.r{background:linear-gradient(to left,transparent,var(--gold));}
+.search-wrap{max-width:520px;margin:0 auto 14px;position:relative;}
+.search-input{width:100%;padding:11px 36px 11px 38px;border-radius:999px;border:1px solid var(--pink-dark);background:white;font-size:13px;color:var(--charcoal);font-family:'Poppins',sans-serif;box-shadow:0 1px 4px rgba(0,0,0,0.05);-webkit-appearance:none;appearance:none;}
+.search-input:focus{outline:none;box-shadow:0 0 0 2px var(--gold);}
+.si{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:13px;pointer-events:none;}
+.sc{position:absolute;right:11px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#9CA3AF;font-size:13px;display:none;padding:4px;}
+.cat-bar{display:flex;gap:7px;overflow-x:auto;padding:6px 2px;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;margin-bottom:20px;}
+.cat-bar::-webkit-scrollbar{display:none;}
+.cat-btn{flex-shrink:0;padding:7px 16px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.5px;border:1px solid var(--pink-dark);background:white;color:#374151;cursor:pointer;transition:all 0.2s;white-space:nowrap;font-family:'Poppins',sans-serif;}
+.cat-btn:hover{background:var(--pink);}
+.cat-btn.active{background:var(--gold)!important;color:white!important;border-color:var(--gold)!important;transform:scale(1.04);box-shadow:0 2px 8px rgba(197,155,39,0.3);}
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:8px;}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(15px,3.5vw,20px);font-weight:700;color:var(--charcoal);display:flex;align-items:center;gap:8px;}
+.title-bar{width:5px;height:22px;background:var(--gold);border-radius:3px;flex-shrink:0;}
+.count-badge{font-size:11px;font-weight:600;color:var(--gold);background:var(--pink);padding:3px 10px;border-radius:999px;border:1px solid var(--pink-dark);white-space:nowrap;flex-shrink:0;}
+.notice{display:none;margin-bottom:14px;padding:9px 13px;border-radius:10px;font-size:12px;align-items:center;gap:7px;}
+.notice.amber{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;}
+.notice.green{background:#F0FDF4;border:1px solid #BBF7D0;color:#166534;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;}
+@media(min-width:600px){.grid{gap:14px;}}
+@media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr);gap:18px;}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(4,1fr);gap:22px;}}
+.skel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;}
+@media(min-width:768px){.skel-grid{grid-template-columns:repeat(3,1fr);gap:18px;}}
+@media(min-width:1024px){.skel-grid{grid-template-columns:repeat(4,1fr);gap:22px;}}
+@keyframes shimmer{0%{background-position:-468px 0}100%{background-position:468px 0}}
+.skel{background:linear-gradient(to right,#f0e6ea 8%,#fce4ef 18%,#f0e6ea 33%);background-size:800px 104px;animation:shimmer 1.5s linear infinite;}
+.skel-card{border-radius:14px;overflow:hidden;border:1px solid var(--pink-dark);}
+.skel-img{padding-top:100%;}
+.skel-body{padding:10px 11px 12px;}
+.skel-line{height:9px;border-radius:999px;margin-bottom:8px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card{background:white;border-radius:14px;border:1px solid var(--pink-dark);box-shadow:0 1px 4px rgba(0,0,0,0.05);overflow:hidden;display:flex;flex-direction:column;transition:all 0.3s;animation:fadeUp 0.4s ease both;}
+.card:hover{box-shadow:0 6px 18px rgba(0,0,0,0.1);border-color:var(--gold);transform:translateY(-2px);}
+.card-img{position:relative;width:100%;padding-top:100%;background:var(--pink);overflow:hidden;}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;pointer-events:none;}
+.card:hover .card-img img{transform:scale(1.05);}
+.oos-overlay{position:absolute;inset:0;background:rgba(255,255,255,0.72);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:5;}
+.oos-tag{background:#EF4444;color:white;font-size:9px;font-weight:700;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:1px;}
+.dots-row{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:6;background:rgba(0,0,0,0.28);padding:3px 7px;border-radius:999px;}
+.dot{width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;transition:all 0.25s;}
+.card-body{padding:9px 11px 11px;display:flex;flex-direction:column;flex-grow:1;}
+.card-cat{font-size:9px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:3px;}
+.card-name{font-size:clamp(10px,2.4vw,13px);font-weight:600;color:var(--charcoal);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:30px;margin-bottom:auto;}
+.card-footer{padding-top:9px;border-top:1px solid var(--pink);margin-top:9px;}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
+.price-label{font-size:8px;color:#9CA3AF;text-transform:uppercase;letter-spacing:1px;}
+.price-val{font-size:clamp(14px,3.5vw,18px);font-weight:700;color:var(--gold);}
+.wa-btn{width:100%;padding:8px 6px;border-radius:9px;background:var(--green);color:white;border:none;font-size:clamp(9px,2.3vw,11px);font-weight:600;letter-spacing:0.3px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;text-decoration:none;transition:all 0.2s;font-family:'Poppins',sans-serif;}
+.wa-btn:hover{background:var(--green-d);transform:scale(1.01);}
+.wa-btn.oos{background:#F3F4F6;color:#9CA3AF;pointer-events:none;}
+.no-products{display:none;text-align:center;padding:48px 16px;}
+.no-icon{width:68px;height:68px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.no-icon i{font-size:26px;color:var(--gold);}
+.clear-btn{margin-top:12px;font-size:12px;color:var(--gold);text-decoration:underline;background:none;border:none;cursor:pointer;font-family:'Poppins',sans-serif;}
+.about{background:var(--pink);padding:clamp(36px,6vw,60px) 16px;border-top:1px solid var(--pink-dark);}
+.about-inner{max-width:860px;margin:0 auto;}
+.sec-heading{text-align:center;margin-bottom:24px;}
+.sec-heading-title{font-family:'Cinzel',serif;font-size:clamp(18px,4vw,28px);font-weight:800;color:var(--charcoal);margin-bottom:4px;}
+.sec-heading-sub{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-weight:600;}
+.about-card{background:rgba(255,255,255,0.85);border:1px solid var(--pink-dark);border-radius:18px;padding:clamp(18px,4vw,30px);display:flex;flex-direction:column;align-items:center;gap:18px;}
+@media(min-width:640px){.about-card{flex-direction:row;align-items:flex-start;}}
+.about-img{width:88px;height:88px;flex-shrink:0;border-radius:50%;border:2px dashed var(--gold);overflow:hidden;background:var(--pink);}
+.about-img img{width:100%;height:100%;object-fit:cover;pointer-events:none;}
+.about-text{font-size:clamp(12px,2.5vw,14px);color:#374151;line-height:1.7;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.about-item{display:flex;align-items:center;gap:6px;font-size:clamp(11px,2.3vw,13px);color:#4B5563;}
+.footer{background:var(--charcoal);color:rgba(255,255,255,0.88);padding:36px 16px 16px;border-top:4px solid var(--gold);}
+.footer-grid{max-width:1152px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(3,1fr);}}
+.footer-title{font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:var(--gold);margin-bottom:10px;}
+.footer-text{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.7;}
+.footer-bottom{max-width:1152px;margin:20px auto 0;padding-top:14px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:10px;color:rgba(255,255,255,0.38);line-height:1.8;}
+.social-row{display:flex;gap:8px;margin-top:10px;}
+.soc-btn{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;transition:background 0.2s;}
+.soc-btn:hover{background:var(--gold);color:var(--charcoal);}
+</style>
 </head>
-
-<body class="flex flex-col min-h-screen relative">
-
-    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-    <a id="wa-float"
-       href="https://wa.me/919669871180?text=Namaste%20Bentex%20Corner%2C%20I%20am%20interested%20in%20viewing%20your%20latest%20jewellery%20collection!"
-       target="_blank" rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 wa-bounce"
-       aria-label="Contact on WhatsApp">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
-
-    <!-- ===== HEADER ===== -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-brandPinkDark/20 py-3 px-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="font-serifTitle text-xl md:text-2xl font-bold tracking-wider gold-text-gradient">BENTEX CORNER</span>
-                <span class="text-[9px] md:text-xs tracking-widest text-gray-500 uppercase font-semibold">Harda, Madhya Pradesh</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <button onclick="toggleLanguage()" id="langBtn"
-                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brandPinkDark bg-brandPink text-deepCharcoal text-xs font-semibold shadow-sm transition hover:bg-brandPinkDark/30">
-                    <i class="fa-solid fa-language text-rose-500"></i>
-                    <span id="langLabel">EN / हिं</span>
-                </button>
-                <a href="https://wa.me/919669871180" target="_blank"
-                   class="hidden sm:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-medium px-4 py-2 rounded-full shadow-sm transition">
-                    <i class="fab fa-whatsapp text-sm"></i>
-                    <span data-translate="chatWithUs">Chat with Us</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- ===== HERO BANNER ===== -->
-    <section class="relative bg-brandPink overflow-hidden border-b border-brandPinkDark/30 py-10 md:py-16 mandala-bg">
-        <div class="absolute inset-0 paisley-pattern opacity-40"></div>
-        <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full border border-roseGold/20 opacity-30 animate-spin-slow flex items-center justify-center">
-            <div class="w-40 h-40 rounded-full border-dashed border-roseGold/30"></div>
-        </div>
-        <div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full border border-roseGold/20 opacity-30 animate-spin-slow flex items-center justify-center">
-            <div class="w-40 h-40 rounded-full border-dashed border-roseGold/30"></div>
-        </div>
-
-        <div class="relative max-w-4xl mx-auto text-center px-4">
-            <div class="flex justify-center mb-3">
-                <div class="w-16 h-16 rounded-full border-2 border-dashed border-roseGold flex items-center justify-center bg-white shadow-md">
-                    <i class="fa-solid fa-gem text-roseGold text-2xl animate-pulse"></i>
-                </div>
-            </div>
-
-            <h1 class="font-serifTitle text-3xl md:text-5xl font-black tracking-wide text-deepCharcoal mb-2">
-                बेंटेक्स कॉर्नर
-                <span class="block text-xl md:text-2xl mt-1 font-normal gold-text-gradient">Bentex Corner</span>
-            </h1>
-
-            <div class="flex items-center justify-center gap-3 my-4">
-                <span class="h-[1px] w-12 bg-roseGold"></span>
-                <i class="fa-solid fa-heart text-xs text-roseGold"></i>
-                <span class="h-[1px] w-12 bg-roseGold"></span>
-            </div>
-
-            <p id="tagline-hindi" class="font-serifTitle text-lg md:text-2xl text-roseGold font-semibold italic mb-1">"सुंदरता का हर श्रृंगार"</p>
-            <p id="tagline-english" class="text-xs md:text-sm tracking-wider text-gray-600 uppercase font-medium">"Every Adornment of Beauty"</p>
-
-            <div class="mt-8 flex flex-wrap justify-center gap-3 text-xs">
-                <span class="bg-white/80 backdrop-blur-sm border border-brandPinkDark px-3 py-1.5 rounded-full flex items-center gap-1.5 text-gray-700 shadow-xs">
-                    <i class="fa-solid fa-check-circle text-emerald-500"></i>
-                    <span data-translate="usp1">Premium Quality</span>
-                </span>
-                <span class="bg-white/80 backdrop-blur-sm border border-brandPinkDark px-3 py-1.5 rounded-full flex items-center gap-1.5 text-gray-700 shadow-xs">
-                    <i class="fa-solid fa-shop text-rose-500"></i>
-                    <span data-translate="usp2">Harda's Trusted Choice</span>
-                </span>
-                <span class="bg-white/80 backdrop-blur-sm border border-brandPinkDark px-3 py-1.5 rounded-full flex items-center gap-1.5 text-gray-700 shadow-xs">
-                    <i class="fa-solid fa-percent text-amber-500"></i>
-                    <span data-translate="usp3">Best Festive Rates</span>
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MAIN CATALOG ===== -->
-    <main class="max-w-6xl mx-auto w-full px-4 py-8 flex-grow">
-
-        <!-- Rangoli divider -->
-        <div class="flex justify-center items-center gap-2 mb-6 opacity-80">
-            <span class="h-[1px] flex-grow max-w-[100px] bg-gradient-to-r from-transparent to-roseGold"></span>
-            <i class="fa-solid fa-snowflake text-roseGold animate-spin-slow"></i>
-            <span class="h-[1px] flex-grow max-w-[100px] bg-gradient-to-l from-transparent to-roseGold"></span>
-        </div>
-
-        <!-- SEARCH BAR -->
-        <div class="mb-5">
-            <div class="relative max-w-xl mx-auto">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-roseGold text-sm pointer-events-none"></i>
-                <input id="searchInput"
-                       type="text"
-                       placeholder="Search jewellery..."
-                       oninput="handleSearch()"
-                       class="search-input w-full pl-10 pr-10 py-3 rounded-full border border-brandPinkDark bg-white text-sm text-deepCharcoal shadow-sm transition placeholder-gray-400"
-                       autocomplete="off" />
-                <button id="clearSearch" onclick="clearSearchInput()"
-                        class="absolute right-3 top-1/2 -translate-y-1/2 hidden text-gray-400 hover:text-roseGold transition p-1">
-                    <i class="fa-solid fa-xmark text-sm"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- CATEGORY FILTER BAR -->
-        <div class="relative mb-8">
-            <div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent pointer-events-none md:hidden z-10"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10"></div>
-            <div id="category-bar" class="flex gap-2.5 overflow-x-auto py-2 px-1 no-scrollbar scroll-smooth snap-x snap-mandatory"></div>
-        </div>
-
-        <!-- SECTION HEADING -->
-        <div class="mb-6 flex justify-between items-end">
-            <div>
-                <h2 class="font-serifTitle text-xl md:text-2xl font-bold text-deepCharcoal tracking-wide flex items-center gap-2">
-                    <span class="w-1.5 h-6 bg-roseGold rounded-full"></span>
-                    <span data-translate="ourCollection">Our Traditional Collection</span>
-                </h2>
-                <p class="text-xs text-gray-500" data-translate="subheading">Tap dots on cards to see design variations</p>
-            </div>
-            <span id="product-count" class="text-xs font-semibold text-roseGold bg-brandPink px-3 py-1 rounded-full border border-brandPinkDark/50"></span>
-        </div>
-
-        <!-- DATA SOURCE NOTICE -->
-        <div id="data-source-notice" class="hidden mb-4 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-700 flex items-center gap-2">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span id="data-source-text">Loading products from Google Sheets...</span>
-        </div>
-
-        <!-- PRODUCT GRID -->
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
-
-        <!-- SKELETON LOADING -->
-        <div id="skeleton-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            <!-- 8 skeleton cards -->
-            <div class="rounded-2xl overflow-hidden border border-brandPinkDark/30">
-                <div class="aspect-square skeleton"></div>
-                <div class="p-3 space-y-2">
-                    <div class="h-3 skeleton rounded-full w-1/2"></div>
-                    <div class="h-3 skeleton rounded-full w-3/4"></div>
-                    <div class="h-8 skeleton rounded-xl mt-3"></div>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden border border-brandPinkDark/30">
-                <div class="aspect-square skeleton"></div>
-                <div class="p-3 space-y-2">
-                    <div class="h-3 skeleton rounded-full w-1/2"></div>
-                    <div class="h-3 skeleton rounded-full w-3/4"></div>
-                    <div class="h-8 skeleton rounded-xl mt-3"></div>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden border border-brandPinkDark/30">
-                <div class="aspect-square skeleton"></div>
-                <div class="p-3 space-y-2">
-                    <div class="h-3 skeleton rounded-full w-1/2"></div>
-                    <div class="h-3 skeleton rounded-full w-3/4"></div>
-                    <div class="h-8 skeleton rounded-xl mt-3"></div>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden border border-brandPinkDark/30">
-                <div class="aspect-square skeleton"></div>
-                <div class="p-3 space-y-2">
-                    <div class="h-3 skeleton rounded-full w-1/2"></div>
-                    <div class="h-3 skeleton rounded-full w-3/4"></div>
-                    <div class="h-8 skeleton rounded-xl mt-3"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- NO PRODUCTS FOUND -->
-        <div id="no-products" class="hidden text-center py-12">
-            <div class="w-20 h-20 mx-auto rounded-full bg-brandPink flex items-center justify-center text-roseGold mb-4">
-                <i class="fa-regular fa-folder-open text-3xl"></i>
-            </div>
-            <p class="text-gray-500 font-medium" data-translate="noProducts">No jewellery items found.</p>
-            <button onclick="clearSearchInput(); selectedCategory='All'; renderCategories(); renderProducts();"
-                    class="mt-4 text-xs text-roseGold underline">Clear filters</button>
-        </div>
-
-    </main>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="bg-brandPink py-12 border-t border-brandPinkDark/40 relative overflow-hidden">
-        <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
-            <i class="fa-solid fa-feather-pointed text-[180px] text-roseGold"></i>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 relative">
-            <div class="text-center mb-8">
-                <div class="flex justify-center items-center gap-4 mb-2">
-                    <span class="h-[1px] w-16 bg-roseGold"></span>
-                    <i class="fa-solid fa-crown text-roseGold"></i>
-                    <span class="h-[1px] w-16 bg-roseGold"></span>
-                </div>
-                <h3 class="font-serifTitle text-2xl md:text-3xl font-extrabold text-deepCharcoal mb-2" data-translate="aboutTitle">About Bentex Corner</h3>
-                <span class="text-roseGold text-xs tracking-widest font-semibold uppercase" data-translate="heritage">HERITAGE OF HARDA</span>
-            </div>
-
-            <div class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-sm border border-brandPinkDark/40 flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-dashed border-roseGold flex-shrink-0 flex items-center justify-center bg-brandPink overflow-hidden shadow-inner">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=200" alt="Bentex Corner" class="w-full h-full object-cover" style="pointer-events:none;">
-                </div>
-                <div class="space-y-3 text-center md:text-left">
-                    <p class="text-gray-700 text-sm md:text-base leading-relaxed" data-translate="aboutText">
-                        Bentex Corner is your destination for premium quality traditional artificial jewellery. Located at the heart of Harda, Madhya Pradesh (near Ghantaghar), we offer an exquisite collection for weddings, festivals like Diwali, Karwa Chauth, and everyday celebrations.
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 pt-3 text-left text-xs md:text-sm">
-                        <div class="flex items-center gap-2 text-gray-600">
-                            <i class="fa-solid fa-map-location-dot text-roseGold"></i>
-                            <span>Harda, MP</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-600">
-                            <i class="fa-solid fa-clock text-roseGold"></i>
-                            <span data-translate="openTime">10:30 AM – 9:00 PM</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-600">
-                            <i class="fa-solid fa-truck-fast text-roseGold"></i>
-                            <span data-translate="delivery">Order via WhatsApp</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-600">
-                            <i class="fa-solid fa-handshake text-roseGold"></i>
-                            <span data-translate="trusted">100% Quality Assurance</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="bg-deepCharcoal text-white/90 pt-12 pb-6 border-t-4 border-roseGold">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <div class="space-y-4">
-                <h4 class="font-serifTitle text-xl font-bold tracking-wider text-roseGold">BENTEX CORNER</h4>
-                <p class="text-xs text-white/70 italic leading-relaxed">
-                    "सुंदरता का हर श्रृंगार" — Bringing timeless designs, festive shimmer, and wedding elegance straight to your jewellery box.
-                </p>
-                <a href="https://wa.me/919669871180" class="inline-flex items-center gap-2 text-emerald-400 font-semibold hover:underline" style="pointer-events:auto;">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>+91 94250 42854</span>
-                </a>
-            </div>
-
-            <div class="space-y-4">
-                <h5 class="text-sm font-semibold tracking-wider text-roseGold uppercase" data-translate="visitUs">VISIT OUR STORE</h5>
-                <p class="text-xs text-white/70 leading-relaxed">
-                    <i class="fa-solid fa-location-dot text-roseGold mr-1.5"></i>
-                    <strong>Bentex Corner</strong><br>
-                    Near Kothari Chowk, Ghantaghar Area,<br>
-                    Harda, Madhya Pradesh – 461331
-                </p>
-                <div class="pt-2">
-                    <span class="text-[10px] bg-roseGold/20 text-roseGold border border-roseGold/30 px-2.5 py-1 rounded-md" data-translate="locationNote">
-                        Near historic Ghantaghar Clocktower
-                    </span>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h5 class="text-sm font-semibold tracking-wider text-roseGold uppercase" data-translate="customerCare">CUSTOMER SERVICE</h5>
-                <p class="text-xs text-white/60">
-                    Browse catalog, select designs, and tap <strong class="text-emerald-400">Order on WhatsApp</strong> to chat with us directly.
-                </p>
-                <div class="flex gap-4 pt-2">
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-roseGold hover:text-deepCharcoal transition" aria-label="Instagram" style="pointer-events:auto;">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-roseGold hover:text-deepCharcoal transition" aria-label="Facebook" style="pointer-events:auto;">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/919669871180" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-roseGold hover:text-deepCharcoal transition" aria-label="WhatsApp" style="pointer-events:auto;">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-white/10 text-center text-[10px] text-white/50 space-y-1">
-            <p>&copy; <span id="currentYear"></span> Bentex Corner, Harda. All rights reserved.</p>
-            <p>Established by Mr. Ragvendra Pandit & Mr. Suryansh Pandit · Powered via WhatsApp Storefront</p>
-        </div>
-    </footer>
-
-
-    <!-- ===== JAVASCRIPT ENGINE ===== -->
-    <script>
-        // ─── CONFIGURATION ─────────────────────────────────────────────────────────
-        // STEP 1: Replace this with your actual published Google Sheet CSV URL
-        // Go to Google Sheets → File → Share → Publish to web → CSV → Copy link
-        const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQoTuEwqmqhXhsZCwk4hMk2zzeMnv0TrD3GFqQRCYuEGvnkVj0kvEdy4FPtlQy01-Rhax3wJNmMWSyK/pub?gid=0&single=true&output=csv";
-
-        // WhatsApp number (with country code, no + or spaces)
-        const WA_NUMBER = "919669871180";
-
-        // ─── FOOTER YEAR ───────────────────────────────────────────────────────────
-        document.getElementById('currentYear').innerText = new Date().getFullYear();
-
-        // ─── LANGUAGE SYSTEM ───────────────────────────────────────────────────────
-        let currentLang = localStorage.getItem('bentex_lang') || 'en';
-
-        const translations = {
-            en: {
-                chatWithUs:    "Chat with Us",
-                usp1:          "Premium Quality",
-                usp2:          "Harda's Trusted Choice",
-                usp3:          "Best Festive Rates",
-                ourCollection: "Our Traditional Collection",
-                subheading:    "Tap dots on cards to see design variations",
-                noProducts:    "No jewellery items found.",
-                aboutTitle:    "About Bentex Corner",
-                heritage:      "HERITAGE OF HARDA",
-                aboutText:     "Bentex Corner is your destination for premium quality traditional artificial jewellery. Located at the heart of Harda, Madhya Pradesh (near Ghantaghar), we offer an exquisite collection for weddings, festivals like Diwali, Karwa Chauth, and everyday celebrations.",
-                openTime:      "10:30 AM – 9:00 PM",
-                delivery:      "Order via WhatsApp",
-                visitUs:       "VISIT OUR STORE",
-                customerCare:  "CUSTOMER SERVICE",
-                locationNote:  "Near historic Ghantaghar Clocktower",
-                orderBtn:      "Order on WhatsApp",
-                outOfStock:    "Out of Stock",
-                trusted:       "100% Quality Assurance",
-                searchPlaceholder: "Search jewellery..."
-            },
-            hi: {
-                chatWithUs:    "व्हाट्सएप चैट करें",
-                usp1:          "उत्कृष्ट गुणवत्ता",
-                usp2:          "हरदा का विश्वसनीय स्थान",
-                usp3:          "उत्सव के लिए सर्वश्रेष्ठ दरें",
-                ourCollection: "हमारा पारंपरिक संग्रह",
-                subheading:    "डिज़ाइन देखने के लिए डॉट्स पर क्लिक करें",
-                noProducts:    "इस श्रेणी में कोई आभूषण नहीं मिले।",
-                aboutTitle:    "बेंटेक्स कॉर्नर के बारे में",
-                heritage:      "हरदा की विरासत",
-                aboutText:     "बेंटेक्स कॉर्नर प्रीमियम गुणवत्ता वाले पारंपरिक आभूषणों का आपका गंतव्य स्थान है। हरदा, मध्य प्रदेश के केंद्र में स्थित, हम शादियों, दिवाली, करवा चौथ और रोज़मर्रा के त्योहारों के लिए एक शानदार संग्रह पेश करते हैं।",
-                openTime:      "सुबह 10:30 – रात 9:00",
-                delivery:      "व्हाट्सएप से आर्डर करें",
-                visitUs:       "दुकान पर पधारें",
-                customerCare:  "ग्राहक सेवा",
-                locationNote:  "ऐतिहासिक घंटाघर के पास",
-                orderBtn:      "व्हाट्सएप पर आर्डर करें",
-                outOfStock:    "स्टॉक में नहीं है",
-                trusted:       "100% गुणवत्ता की गारंटी",
-                searchPlaceholder: "आभूषण खोजें..."
-            }
-        };
-
-        // ─── PRODUCT DATA ──────────────────────────────────────────────────────────
-        // rawProducts is filled either from Google Sheets OR fallback demo data
-        let rawProducts = [];
-        let selectedCategory = "All";
-        let activeImageIndices = {};
-        let searchQuery = "";
-
-        // ─── CATEGORIES ────────────────────────────────────────────────────────────
-        // These are auto-built from data, but defined here for Hindi labels
-        const categoryLabels = {
-            "All":         { en: "All",          hi: "सभी आभूषण" },
-            "Necklace":    { en: "Necklace",      hi: "हार / नेकलेस" },
-            "Earrings":    { en: "Earrings",      hi: "झुमकी / बाली" },
-            "Bangles":     { en: "Bangles",       hi: "कंगन / चूड़ियाँ" },
-            "Rings":       { en: "Rings",         hi: "अंगूठी" },
-            "Anklets":     { en: "Anklets",       hi: "पायल" },
-            "Maang Tikka": { en: "Maang Tikka",   hi: "मांग टीका" },
-            "Bridal Sets": { en: "Bridal Sets",   hi: "ब्राइडल सेट" }
-        };
-
-        // ─── GOOGLE SHEETS CSV PARSER ──────────────────────────────────────────────
-        // Expected Sheet columns (row 1 = headers):
-        // id | name_english | name_hindi | category | price | image1_url | image2_url | image3_url | whatsapp_message | in_stock
-
-        function parseCSV(csvText) {
-            const lines = csvText.trim().split('\n');
-            if (lines.length < 2) return [];
-            // Remove header row
-            const dataLines = lines.slice(1);
-            return dataLines.map((line, idx) => {
-                // Handle commas inside quoted fields
-                const cols = [];
-                let inQuote = false;
-                let col = '';
-                for (let i = 0; i < line.length; i++) {
-                    const ch = line[i];
-                    if (ch === '"') { inQuote = !inQuote; }
-                    else if (ch === ',' && !inQuote) { cols.push(col.trim()); col = ''; }
-                    else { col += ch; }
-                }
-                cols.push(col.trim());
-
-                const images = [cols[5], cols[6], cols[7]].filter(Boolean);
-                return {
-                    id:       cols[0] ? parseInt(cols[0]) : (idx + 1),
-                    name_en:  cols[1] || "Jewellery Item",
-                    name_hi:  cols[2] || "आभूषण",
-                    category: cols[3] || "Necklace",
-                    price:    cols[4] ? parseFloat(cols[4]) : 0,
-                    images:   images.length > 0 ? images : ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600"],
-                    inStock:  cols[9] ? cols[9].toLowerCase() !== 'false' && cols[9] !== '0' && cols[9].toLowerCase() !== 'no' : true
-                };
-            }).filter(p => p.name_en); // filter empty rows
-        }
-
-        // ─── DEMO FALLBACK DATA ─────────────────────────────────────────────────────
-        // Used when Google Sheet URL is not configured or fails to load
-        const demoProducts = [
-            { id:1, category:"Necklace",    name_en:"Classic Kundan Bridal Necklace Set",         name_hi:"क्लासिक कुंदन ब्राइडल नेकलेस सेट",           price:1850, inStock:true,  images:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=600"] },
-            { id:2, category:"Earrings",    name_en:"Rose Gold Jhumka Earrings with Pearls",       name_hi:"मोतियों वाले रोज़ गोल्ड झुमके",                price:380,  inStock:true,  images:["https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600"] },
-            { id:3, category:"Bangles",     name_en:"Traditional Gold-Plated Bridal Kada Set",     name_hi:"पारंपरिक गोल्ड-प्लेटेड ब्राइडल कड़ा सेट",     price:750,  inStock:true,  images:["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600"] },
-            { id:4, category:"Rings",       name_en:"Royal Rajputi Adjustable Ring",               name_hi:"शाही राजपूती एडजस्टेबल अंगूठी",              price:240,  inStock:true,  images:["https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=600"] },
-            { id:5, category:"Anklets",     name_en:"Traditional Meenakari Payal",                 name_hi:"पारंपरिक मीनाकारी पायल",                       price:490,  inStock:false, images:["https://images.unsplash.com/photo-1543294001-f7cbfe92237e?auto=format&fit=crop&q=80&w=600"] },
-            { id:6, category:"Maang Tikka", name_en:"Designer Kundan Maang Tikka with Pearls",     name_hi:"मोतियों के साथ डिज़ाइनर कुंदन मांग टीका",     price:320,  inStock:true,  images:["https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80&w=600"] },
-            { id:7, category:"Bridal Sets", name_en:"Complete Heritage Bridal Choker & Long Set",  name_hi:"कम्प्लीट हेरिटेज ब्राइडल चोकर और लॉन्ग सेट", price:4500, inStock:true,  images:["https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=600"] },
-            { id:8, category:"Necklace",    name_en:"Exquisite Gold Choker Necklace",              name_hi:"अति सुंदर स्वर्ण चोकर हार",                  price:1200, inStock:true,  images:["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600"] }
-        ];
-
-        // ─── LOAD PRODUCTS ─────────────────────────────────────────────────────────
-        async function loadProducts() {
-            showSkeleton(true);
-
-            // If URL not configured, use demo data immediately
-            if (!GOOGLE_SHEET_CSV_URL || GOOGLE_SHEET_CSV_URL === "YOUR_GOOGLE_SHEET_CSV_URL_HERE") {
-                rawProducts = demoProducts;
-                showSkeleton(false);
-                renderCategories();
-                renderProducts();
-                showNotice("⚠️ Demo mode: Replace GOOGLE_SHEET_CSV_URL in the code with your actual Google Sheet link.", "amber");
-                return;
-            }
-
-            try {
-                const res = await fetch(GOOGLE_SHEET_CSV_URL);
-                if (!res.ok) throw new Error("Fetch failed");
-                const csvText = await res.text();
-                const parsed = parseCSV(csvText);
-
-                if (parsed.length === 0) throw new Error("Empty sheet");
-
-                rawProducts = parsed;
-                showSkeleton(false);
-                renderCategories();
-                renderProducts();
-                showNotice(`✅ ${rawProducts.length} products loaded from Google Sheets.`, "green");
-                setTimeout(() => hideNotice(), 3000);
-
-            } catch (err) {
-                console.warn("Google Sheets fetch failed, using demo data:", err);
-                rawProducts = demoProducts;
-                showSkeleton(false);
-                renderCategories();
-                renderProducts();
-                showNotice("⚠️ Could not load Google Sheet. Showing demo products.", "amber");
-            }
-        }
-
-        function showSkeleton(show) {
-            document.getElementById('skeleton-grid').style.display = show ? 'grid' : 'none';
-            document.getElementById('product-grid').style.display  = show ? 'none' : 'grid';
-        }
-
-        function showNotice(text, color) {
-            const notice = document.getElementById('data-source-notice');
-            const textEl = document.getElementById('data-source-text');
-            textEl.innerText = text;
-            notice.className = notice.className
-                .replace(/bg-\S+/g, color === 'green' ? 'bg-green-50' : 'bg-amber-50')
-                .replace(/border-\S+/g, color === 'green' ? 'border-green-200' : 'border-amber-200')
-                .replace(/text-\S+700/g, color === 'green' ? 'text-green-700' : 'text-amber-700');
-            notice.classList.remove('hidden');
-        }
-
-        function hideNotice() {
-            document.getElementById('data-source-notice').classList.add('hidden');
-        }
-
-        // ─── SEARCH ────────────────────────────────────────────────────────────────
-        function handleSearch() {
-            const input = document.getElementById('searchInput');
-            searchQuery = input.value.trim().toLowerCase();
-            document.getElementById('clearSearch').classList.toggle('hidden', searchQuery === '');
-            renderProducts();
-        }
-
-        function clearSearchInput() {
-            document.getElementById('searchInput').value = '';
-            searchQuery = '';
-            document.getElementById('clearSearch').classList.add('hidden');
-            renderProducts();
-        }
-
-        // ─── LANGUAGE TOGGLE ───────────────────────────────────────────────────────
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'hi' : 'en';
-            localStorage.setItem('bentex_lang', currentLang);
-            document.getElementById('langLabel').innerText = currentLang === 'en' ? 'EN / हिं' : 'हिं / EN';
-            document.getElementById('searchInput').placeholder = translations[currentLang].searchPlaceholder;
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (translations[currentLang][key]) el.innerText = translations[currentLang][key];
-            });
-            renderCategories();
-            renderProducts();
-        }
-
-        // Apply saved language preference on load
-        function applySavedLanguage() {
-            if (currentLang === 'hi') {
-                document.getElementById('langLabel').innerText = 'हिं / EN';
-                document.getElementById('searchInput').placeholder = translations.hi.searchPlaceholder;
-                document.querySelectorAll('[data-translate]').forEach(el => {
-                    const key = el.getAttribute('data-translate');
-                    if (translations.hi[key]) el.innerText = translations.hi[key];
-                });
-            }
-        }
-
-        // ─── CATEGORY BAR ──────────────────────────────────────────────────────────
-        function renderCategories() {
-            const catContainer = document.getElementById('category-bar');
-            catContainer.innerHTML = '';
-
-            // Build category list dynamically from product data
-            const catSet = new Set(rawProducts.map(p => p.category));
-            const cats = [{ id: "All" }, ...Array.from(catSet).map(c => ({ id: c }))];
-
-            cats.forEach(cat => {
-                const isSelected = selectedCategory === cat.id;
-                const label = categoryLabels[cat.id]
-                    ? (currentLang === 'en' ? categoryLabels[cat.id].en : categoryLabels[cat.id].hi)
-                    : cat.id;
-
-                const btn = document.createElement('button');
-                btn.className = `snap-start shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider border transition-all duration-300 shadow-sm ${
-                    isSelected
-                    ? 'bg-roseGold text-white border-roseGold scale-105 shadow-md'
-                    : 'bg-white text-gray-700 border-brandPinkDark/40 hover:bg-brandPink'
-                }`;
-                btn.style.backgroundColor = isSelected ? '#C59B27' : '';
-                btn.style.color           = isSelected ? '#fff'     : '';
-                btn.innerText = label;
-                btn.addEventListener('click', () => {
-                    selectedCategory = cat.id;
-                    renderCategories();
-                    renderProducts();
-                    btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-                });
-                catContainer.appendChild(btn);
-            });
-        }
-
-        // ─── WHATSAPP LINK ─────────────────────────────────────────────────────────
-        function getWhatsAppLink(productName, price) {
-            const msg = currentLang === 'en'
-                ? `Namaste Bentex Corner! I saw this in your online catalog and want to order:\n\n*Product:* ${productName}\n*Price:* ₹${price}\n\nIs this available in stock?`
-                : `नमस्ते बेंटेक्स कॉर्नर! मैंने आपके कैटलॉग में देखा:\n\n*उत्पाद:* ${productName}\n*मूल्य:* ₹${price}\n\nक्या यह स्टॉक में उपलब्ध है?`;
-            return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-        }
-
-        // ─── IMAGE CAROUSEL ────────────────────────────────────────────────────────
-        window.switchProductImage = function(productId, imageIndex) {
-            activeImageIndices[productId] = imageIndex;
-            const imgEl = document.getElementById(`pimg-${productId}`);
-            const product = rawProducts.find(p => p.id === productId);
-            if (imgEl && product) imgEl.src = product.images[imageIndex];
-
-            product.images.forEach((_, idx) => {
-                const dot = document.getElementById(`dot-${productId}-${idx}`);
-                if (dot) {
-                    dot.style.backgroundColor = idx === imageIndex ? '#C59B27' : 'rgba(209,213,219,0.8)';
-                    dot.style.transform       = idx === imageIndex ? 'scale(1.2)' : 'scale(1)';
-                }
-            });
-        };
-
-        // ─── RENDER PRODUCTS ───────────────────────────────────────────────────────
-        function renderProducts() {
-            const grid        = document.getElementById('product-grid');
-            const noProducts  = document.getElementById('no-products');
-            const countText   = document.getElementById('product-count');
-            grid.innerHTML    = '';
-
-            // Filter by category
-            let filtered = selectedCategory === "All"
-                ? rawProducts
-                : rawProducts.filter(p => p.category === selectedCategory);
-
-            // Filter by search query
-            if (searchQuery) {
-                filtered = filtered.filter(p =>
-                    p.name_en.toLowerCase().includes(searchQuery) ||
-                    p.name_hi.includes(searchQuery) ||
-                    p.category.toLowerCase().includes(searchQuery)
-                );
-            }
-
-            // Update count
-            countText.innerText = `${filtered.length} ${currentLang === 'en' ? 'Designs' : 'डिज़ाइन'}`;
-
-            if (filtered.length === 0) {
-                grid.classList.add('hidden');
-                noProducts.classList.remove('hidden');
-                return;
-            }
-
-            grid.classList.remove('hidden');
-            noProducts.classList.add('hidden');
-
-            filtered.forEach((prod, index) => {
-                if (activeImageIndices[prod.id] === undefined) activeImageIndices[prod.id] = 0;
-                const activeIdx  = activeImageIndices[prod.id];
-                const currentImg = prod.images[activeIdx];
-                const prodName   = currentLang === 'en' ? prod.name_en : prod.name_hi;
-                const waLink     = getWhatsAppLink(prodName, prod.price);
-                const orderLabel = translations[currentLang].orderBtn;
-                const ooLabel    = translations[currentLang].outOfStock;
-
-                const card = document.createElement('div');
-                card.className = "product-card bg-white rounded-2xl border border-brandPinkDark/50 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:border-roseGold relative group fade-in-card";
-                card.style.animationDelay = `${index * 50}ms`;
-
-                const stockOverlay = !prod.inStock ? `
-                    <div class="absolute inset-0 bg-white/70 backdrop-blur-sm z-10 flex items-center justify-center">
-                        <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow uppercase tracking-wider">${ooLabel}</span>
-                    </div>` : '';
-
-                const dots = prod.images.length > 1 ? `
-                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 bg-black/30 px-2 py-1 rounded-full">
-                        ${prod.images.map((_, idx) => `
-                            <button id="dot-${prod.id}-${idx}"
-                                    onclick="event.stopPropagation(); switchProductImage(${prod.id}, ${idx})"
-                                    style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;background:${idx === activeIdx ? '#C59B27' : 'rgba(209,213,219,0.8)'};transform:${idx === activeIdx ? 'scale(1.2)' : 'scale(1)'}">
-                            </button>`).join('')}
-                    </div>` : '';
-
-                card.innerHTML = `
-                    <div class="relative">
-                        ${stockOverlay}
-                        <div class="aspect-square w-full bg-brandPink overflow-hidden relative">
-                            <img id="pimg-${prod.id}" src="${currentImg}" alt="${prodName}"
-                                 class="product-img w-full h-full object-cover"
-                                 loading="lazy"
-                                 onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=400'">
-                            ${dots}
-                        </div>
-                    </div>
-                    <div class="p-3.5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <span class="text-[10px] text-roseGold font-semibold uppercase tracking-widest block mb-1">${prod.category}</span>
-                            <h3 class="text-xs md:text-sm font-semibold text-deepCharcoal line-clamp-2 leading-relaxed tracking-wide min-h-[36px]">${prodName}</h3>
-                        </div>
-                        <div class="mt-3.5 pt-3 border-t border-brandPink/60">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="text-[10px] text-gray-400 uppercase tracking-wider">${currentLang === 'en' ? 'Best Offer' : 'विशेष मूल्य'}</span>
-                                <span class="text-base md:text-lg font-bold" style="color:#C59B27">₹${prod.price}</span>
-                            </div>
-                            <a href="${prod.inStock ? waLink : '#'}"
-                               target="${prod.inStock ? '_blank' : '_self'}"
-                               style="pointer-events:auto;"
-                               class="w-full py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-semibold tracking-wider transition-all duration-300 ${
-                                   prod.inStock
-                                   ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm hover:shadow active:scale-95'
-                                   : 'bg-gray-100 text-gray-400 cursor-not-allowed pointer-events-none'
-                               }">
-                                <i class="fab fa-whatsapp text-sm"></i>
-                                <span>${orderLabel}</span>
-                            </a>
-                        </div>
-                    </div>`;
-
-                grid.appendChild(card);
-            });
-        }
-
-        // ─── INIT ──────────────────────────────────────────────────────────────────
-        window.addEventListener('DOMContentLoaded', () => {
-            applySavedLanguage();
-            loadProducts();
-        });
-
-        // Context menu disabled on product grid images
-        document.addEventListener('contextmenu', e => {
-            if (e.target.tagName === 'IMG') e.preventDefault();
-        });
-    </script>
-
+<body>
+<a class="wa-float" href="https://wa.me/919669871180?text=Namaste%20Bentex%20Corner!" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<header class="header">
+<div class="header-inner">
+<div style="display:flex;align-items:center;gap:10px;">
+<img src="https://res.cloudinary.com/dypbg6lce/image/upload/v1782293863/WhatsApp_Image_2026-06-24_at_3.05.19_PM_mvyozs.jpg" alt="Bentex Corner Logo" style="height:48px;width:48px;object-fit:contain;border-radius:50%;border:1.5px solid #C59B27;background:white;pointer-events:none;">
+<div><p class="logo-name">BENTEX CORNER</p><p class="logo-sub">Harda, Madhya Pradesh</p></div>
+</div>
+<div class="header-actions">
+<button class="lang-btn" onclick="toggleLang()"><i class="fa-solid fa-language" style="color:#EF4444"></i><span id="langLabel">EN / हिं</span></button>
+<a class="wa-hdr" href="https://wa.me/919669871180" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span data-t="chatWithUs">Chat with Us</span></a>
+</div>
+</div>
+</header>
+<section class="hero">
+<div class="hero-gem"><i class="fa-solid fa-gem"></i></div>
+<p class="hero-title-hi">बेंटेक्स कॉर्नर</p>
+<p class="hero-title-en">Bentex Corner</p>
+<div class="hero-div"><span></span><i class="fa-solid fa-heart" style="font-size:10px;color:var(--gold)"></i><span></span></div>
+<p class="hero-tag-hi">"सुंदरता का हर श्रृंगार"</p>
+<p class="hero-tag-en">"Every Adornment of Beauty"</p>
+<div class="hero-badges">
+<span class="hero-badge"><i class="fa-solid fa-check-circle" style="color:#22C55E"></i><span data-t="usp1">Premium Quality</span></span>
+<span class="hero-badge"><i class="fa-solid fa-shop" style="color:#EF4444"></i><span data-t="usp2">Harda's Trusted Choice</span></span>
+<span class="hero-badge"><i class="fa-solid fa-percent" style="color:#F59E0B"></i><span data-t="usp3">Best Festive Rates</span></span>
+</div>
+</section>
+<main class="main">
+<div class="rangoli"><div class="rl l"></div><i class="fa-solid fa-snowflake" style="color:var(--gold);font-size:12px"></i><div class="rl r"></div></div>
+<div class="search-wrap">
+<i class="fa-solid fa-magnifying-glass si"></i>
+<input class="search-input" id="searchInput" type="text" placeholder="Search jewellery..." oninput="doSearch()" autocomplete="off">
+<button class="sc" id="clearBtn" onclick="clearSearch()"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div class="cat-bar" id="catBar"></div>
+<div class="sec-head">
+<h2 class="sec-title"><span class="title-bar"></span><span data-t="ourCollection">Our Traditional Collection</span></h2>
+<span class="count-badge" id="countBadge"></span>
+</div>
+<div class="notice" id="notice"><i class="fa-solid fa-circle-info"></i><span id="noticeText"></span></div>
+<div class="skel-grid" id="skelGrid">
+<div class="skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line skel" style="width:50%"></div><div class="skel-line skel" style="width:75%"></div><div class="skel-line skel" style="width:100%;height:28px;margin-top:10px"></div></div></div>
+<div class="skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line skel" style="width:50%"></div><div class="skel-line skel" style="width:75%"></div><div class="skel-line skel" style="width:100%;height:28px;margin-top:10px"></div></div></div>
+<div class="skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line skel" style="width:50%"></div><div class="skel-line skel" style="width:75%"></div><div class="skel-line skel" style="width:100%;height:28px;margin-top:10px"></div></div></div>
+<div class="skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line skel" style="width:50%"></div><div class="skel-line skel" style="width:75%"></div><div class="skel-line skel" style="width:100%;height:28px;margin-top:10px"></div></div></div>
+</div>
+<div class="grid" id="productGrid" style="display:none"></div>
+<div class="no-products" id="noProducts">
+<div class="no-icon"><i class="fa-regular fa-folder-open"></i></div>
+<p style="color:#6B7280;font-weight:500" data-t="noProducts">No jewellery items found.</p>
+<button class="clear-btn" onclick="clearSearch();selectedCat='All';renderCats();renderProducts()">Clear filters</button>
+</div>
+</main>
+<section class="about">
+<div class="about-inner">
+<div class="sec-heading">
+<div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px"><span style="height:1px;width:50px;background:var(--gold)"></span><i class="fa-solid fa-crown" style="color:var(--gold)"></i><span style="height:1px;width:50px;background:var(--gold)"></span></div>
+<h3 class="sec-heading-title" data-t="aboutTitle">About Bentex Corner</h3>
+<p class="sec-heading-sub" data-t="heritage">Heritage of Harda</p>
+</div>
+<div class="about-card">
+<div class="about-img"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=200" alt="Bentex Corner"></div>
+<div>
+<p class="about-text" data-t="aboutText">Bentex Corner is your destination for premium quality traditional artificial jewellery. Located at the heart of Harda, Madhya Pradesh (near Ghantaghar), we offer an exquisite collection for weddings, festivals like Diwali, Karwa Chauth, and everyday celebrations.</p>
+<div class="about-grid">
+<div class="about-item"><i class="fa-solid fa-map-location-dot" style="color:var(--gold)"></i><span>Harda, MP</span></div>
+<div class="about-item"><i class="fa-solid fa-clock" style="color:var(--gold)"></i><span data-t="openTime">10:30 AM - 9:00 PM</span></div>
+<div class="about-item"><i class="fa-solid fa-truck-fast" style="color:var(--gold)"></i><span data-t="delivery">Order via WhatsApp</span></div>
+<div class="about-item"><i class="fa-solid fa-handshake" style="color:var(--gold)"></i><span data-t="trusted">100% Quality Assurance</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-grid">
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+<img src="https://res.cloudinary.com/dypbg6lce/image/upload/v1782293863/WhatsApp_Image_2026-06-24_at_3.05.19_PM_mvyozs.jpg" alt="Bentex Corner" style="height:44px;width:44px;object-fit:contain;border-radius:50%;background:white;border:1.5px solid #C59B27;pointer-events:none;">
+<p class="footer-title" style="margin-bottom:0">BENTEX CORNER</p>
+</div>
+<p class="footer-text">"सुंदरता का हर श्रृंगार" — Timeless designs, festive shimmer, and wedding elegance for every occasion.</p>
+<a href="https://wa.me/919669871180" style="color:#4ADE80;font-weight:600;font-size:13px;display:flex;align-items:center;gap:6px;margin-top:10px"><i class="fab fa-whatsapp"></i> +91 96698 71180</a>
+</div>
+<div>
+<p class="footer-title" data-t="visitUs">VISIT OUR STORE</p>
+<p class="footer-text"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-right:5px"></i><strong>Bentex Corner</strong><br>Near Kothari Chowk, Ghantaghar,<br>Harda, Madhya Pradesh - 461331</p>
+</div>
+<div>
+<p class="footer-title" data-t="customerCare">CUSTOMER SERVICE</p>
+<p class="footer-text">Browse catalog, select designs, and tap <strong style="color:#4ADE80">Order on WhatsApp</strong> to chat with us directly.</p>
+<div class="social-row">
+<a class="soc-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a class="soc-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a class="soc-btn" href="https://wa.me/919669871180" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom"><p>&copy; <span id="yr"></span> Bentex Corner, Harda. All rights reserved.</p><p>Established by Mr. Ragvendra Pandit &amp; Mr. Suryansh Pandit</p></div>
+</footer>
+<script>
+const SHEET_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoTuEwqmqhXhsZCwk4hMk2zzeMnv0TrD3GFqQRCYuEGvnkVjOkvEdy4FPtlQyO1-Rhax3wJNmMWSyK/pub?gid=0&single=true&output=csv";
+const WA="919669871180";
+document.getElementById('yr').textContent=new Date().getFullYear();
+let lang=localStorage.getItem('bx_lang')||'en';
+const T={en:{chatWithUs:"Chat with Us",usp1:"Premium Quality",usp2:"Harda's Trusted Choice",usp3:"Best Festive Rates",ourCollection:"Our Traditional Collection",noProducts:"No jewellery items found.",aboutTitle:"About Bentex Corner",heritage:"HERITAGE OF HARDA",aboutText:"Bentex Corner is your destination for premium quality traditional artificial jewellery. Located at the heart of Harda, Madhya Pradesh (near Ghantaghar), we offer an exquisite collection for weddings, festivals like Diwali, Karwa Chauth, and everyday celebrations.",openTime:"10:30 AM - 9:00 PM",delivery:"Order via WhatsApp",visitUs:"VISIT OUR STORE",customerCare:"CUSTOMER SERVICE",orderBtn:"Order on WhatsApp",outOfStock:"Out of Stock",trusted:"100% Quality Assurance"},hi:{chatWithUs:"व्हाट्सएप चैट",usp1:"उत्कृष्ट गुणवत्ता",usp2:"हरदा का विश्वसनीय स्थान",usp3:"उत्सव के लिए सर्वश्रेष्ठ दरें",ourCollection:"हमारा पारंपरिक संग्रह",noProducts:"कोई आभूषण नहीं मिले।",aboutTitle:"बेंटेक्स कॉर्नर के बारे में",heritage:"हरदा की विरासत",aboutText:"बेंटेक्स कॉर्नर प्रीमियम गुणवत्ता वाले पारंपरिक आभूषणों का आपका गंतव्य है।",openTime:"सुबह 10:30 - रात 9:00",delivery:"व्हाट्सएप से आर्डर करें",visitUs:"दुकान पर पधारें",customerCare:"ग्राहक सेवा",orderBtn:"व्हाट्सएप पर आर्डर करें",outOfStock:"स्टॉक में नहीं",trusted:"100% गुणवत्ता की गारंटी"}};
+const catLabels={"All":{en:"All",hi:"सभी"},"Necklace":{en:"Necklace",hi:"हार"},"Earrings":{en:"Earrings",hi:"झुमकी"},"Bangles":{en:"Bangles",hi:"कंगन"},"Rings":{en:"Rings",hi:"अंगूठी"},"Anklets":{en:"Anklets",hi:"पायल"},"Maang Tikka":{en:"Maang Tikka",hi:"मांग टीका"},"Bridal Sets":{en:"Bridal Sets",hi:"ब्राइडल सेट"}};
+function applyLang(){document.querySelectorAll('[data-t]').forEach(el=>{const k=el.getAttribute('data-t');if(T[lang][k])el.textContent=T[lang][k];});document.getElementById('langLabel').textContent=lang==='en'?'EN / हिं':'हिं / EN';document.getElementById('searchInput').placeholder=lang==='en'?'Search jewellery...':'आभूषण खोजें...';}
+function toggleLang(){lang=lang==='en'?'hi':'en';localStorage.setItem('bx_lang',lang);applyLang();renderCats();renderProducts();}
+let products=[],selectedCat='All',imgIdx={},query='';
+const DEMO=[{id:1,en:"Classic Kundan Bridal Necklace Set",hi:"क्लासिक कुंदन ब्राइडल नेकलेस सेट",cat:"Necklace",price:1850,imgs:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600","https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=600"],stock:true},{id:2,en:"Rose Gold Jhumka Earrings",hi:"रोज़ गोल्ड झुमके",cat:"Earrings",price:380,imgs:["https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=600"],stock:true},{id:3,en:"Gold Plated Bangles Set",hi:"गोल्ड कंगन सेट",cat:"Bangles",price:750,imgs:["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600"],stock:true},{id:4,en:"Royal Adjustable Ring",hi:"शाही अंगूठी",cat:"Rings",price:240,imgs:["https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600"],stock:true},{id:5,en:"Traditional Meenakari Payal",hi:"मीनाकारी पायल",cat:"Anklets",price:490,imgs:["https://images.unsplash.com/photo-1543294001-f7cbfe92237e?auto=format&fit=crop&q=80&w=600"],stock:false},{id:6,en:"Kundan Maang Tikka",hi:"कुंदन मांग टीका",cat:"Maang Tikka",price:320,imgs:["https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80&w=600"],stock:true},{id:7,en:"Heritage Bridal Set",hi:"हेरिटेज ब्राइडल सेट",cat:"Bridal Sets",price:4500,imgs:["https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&q=80&w=600"],stock:true},{id:8,en:"Gold Choker Necklace",hi:"गोल्ड चोकर हार",cat:"Necklace",price:1200,imgs:["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600"],stock:true}];
+function parseCSV(text){const lines=text.trim().split('\n').slice(1);return lines.map((line,i)=>{const cols=[];let q=false,col='';for(let c of line){if(c==='"'){q=!q}else if(c===','&&!q){cols.push(col.trim());col=''}else col+=c;}cols.push(col.trim());const imgs=[cols[5],cols[6],cols[7]].filter(Boolean);return{id:parseInt(cols[0])||i+1,en:cols[1]||'Jewellery',hi:cols[2]||'आभूषण',cat:cols[3]||'Necklace',price:parseFloat(cols[4])||0,imgs:imgs.length?imgs:["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=400"],stock:cols[9]?!['false','0','no'].includes(cols[9].toLowerCase().trim()):true,desc:cols[10]||'',material:cols[11]||'',size:cols[12]||'',discount:parseFloat(cols[13])||0};}).filter(p=>p.en);}
+async function load(){showSkel(true);try{const r=await fetch(SHEET_URL);if(!r.ok)throw new Error('fail');const csv=await r.text();const parsed=parseCSV(csv);if(!parsed.length)throw new Error('empty');products=parsed;showSkel(false);renderCats();renderProducts();showNotice('Products loaded successfully.','green');setTimeout(hideNotice,3000);}catch(e){console.warn('Sheet failed:',e);products=DEMO;showSkel(false);renderCats();renderProducts();showNotice('Showing demo products. Connect your Google Sheet to show real products.','amber');}}
+function showSkel(v){document.getElementById('skelGrid').style.display=v?'grid':'none';document.getElementById('productGrid').style.display=v?'none':'grid';}
+function showNotice(txt,type){const n=document.getElementById('notice');n.className='notice '+type;n.style.display='flex';document.getElementById('noticeText').textContent=txt;}
+function hideNotice(){document.getElementById('notice').style.display='none';}
+function doSearch(){query=document.getElementById('searchInput').value.trim().toLowerCase();document.getElementById('clearBtn').style.display=query?'block':'none';renderProducts();}
+function clearSearch(){document.getElementById('searchInput').value='';query='';document.getElementById('clearBtn').style.display='none';renderProducts();}
+function renderCats(){const bar=document.getElementById('catBar');bar.innerHTML='';const cats=['All',...new Set(products.map(p=>p.cat))];cats.forEach(c=>{const lbl=catLabels[c]?catLabels[c][lang]:c;const btn=document.createElement('button');btn.className='cat-btn'+(selectedCat===c?' active':'');btn.textContent=lbl;btn.onclick=()=>{selectedCat=c;renderCats();renderProducts();btn.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});};bar.appendChild(btn);});}
+function waLink(name,price){const msg=lang==='en'?'Namaste Bentex Corner! I want to order:\n\n*Product:* '+name+'\n*Price:* Rs.'+price+'\n\nIs it available?':'नमस्ते बेंटेक्स कॉर्नर! मुझे ऑर्डर करना है:\n\n*उत्पाद:* '+name+'\n*मूल्य:* Rs.'+price+'\n\nक्या उपलब्ध है?';return'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
+window.switchImg=function(id,idx){imgIdx[id]=idx;const p=products.find(p=>p.id===id);if(!p)return;const el=document.getElementById('img-'+id);if(el)el.src=p.imgs[idx];p.imgs.forEach((_,i)=>{const d=document.getElementById('d-'+id+'-'+i);if(d){d.style.background=i===idx?'var(--gold)':'rgba(255,255,255,0.6)';d.style.transform=i===idx?'scale(1.2)':'scale(1)';}});};
+function renderProducts(){const grid=document.getElementById('productGrid');const noProd=document.getElementById('noProducts');grid.innerHTML='';let list=selectedCat==='All'?products:products.filter(p=>p.cat===selectedCat);if(query)list=list.filter(p=>p.en.toLowerCase().includes(query)||p.hi.includes(query)||p.cat.toLowerCase().includes(query));document.getElementById('countBadge').textContent=list.length+' '+(lang==='en'?'Designs':'डिज़ाइन');if(!list.length){grid.style.display='none';noProd.style.display='block';return;}grid.style.display='grid';noProd.style.display='none';list.forEach((p,i)=>{if(imgIdx[p.id]===undefined)imgIdx[p.id]=0;const idx=imgIdx[p.id];const name=lang==='en'?p.en:p.hi;const oLabel=T[lang].orderBtn;const oosLabel=T[lang].outOfStock;const dots=p.imgs.length>1?'<div class="dots-row">'+p.imgs.map((_,j)=>'<button id="d-'+p.id+'-'+j+'" class="dot" onclick="event.stopPropagation();switchImg('+p.id+','+j+')" style="background:'+(j===idx?'var(--gold)':'rgba(255,255,255,0.6)')+';transform:'+(j===idx?'scale(1.2)':'scale(1)')+'"></button>').join('')+'</div>':'';const oos=!p.stock?'<div class="oos-overlay"><span class="oos-tag">'+oosLabel+'</span></div>':'';const card=document.createElement('div');card.className='card';card.style.animationDelay=i*40+'ms';card.innerHTML='<div class="card-img">'+oos+'<img id="img-'+p.id+'" src="'+p.imgs[idx]+'" alt="'+name+'" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=400'">'+dots+'</div><div class="card-body"><p class="card-cat">'+p.cat+'</p><p class="card-name">'+name+'</p><div class="card-footer"><div class="price-row"><span class="price-label">'+(lang==='en'?'Best Offer':'विशेष मूल्य')+'</span><span class="price-val">Rs.'+p.price+'</span></div><a href="'+(p.stock?waLink(name,p.price):'#')+'" target="'+(p.stock?'_blank':'_self')+'" class="wa-btn'+(p.stock?'':' oos')+'"><i class="fab fa-whatsapp"></i> '+oLabel+'</a></div></div>';grid.appendChild(card);});}
+applyLang();load();
+document.addEventListener('contextmenu',e=>{if(e.target.tagName==='IMG')e.preventDefault();});
+</script>
 </body>
 </html>
